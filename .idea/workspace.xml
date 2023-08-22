@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="421fb70f-6cfd-4f4f-a395-b0fff41e15c0" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jpa-buddy.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mvnw" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mvnw.cmd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/computer_science_ia/Controllers/AddNoteController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/computer_science_ia/Controllers/AddTaskController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/computer_science_ia/Controllers/EditNoteController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/computer_science_ia/Controllers/LoginController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/computer_science_ia/Controllers/MainMenuController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/computer_science_ia/Controllers/RenameTaskController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/computer_science_ia/Controllers/SetTaskDescriptionController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/computer_science_ia/Controllers/SetTaskDueDateController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/computer_science_ia/Controllers/SetTaskPriorityController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/computer_science_ia/Controllers/SetTaskStatusController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/computer_science_ia/Controllers/SignupController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/computer_science_ia/Controllers/SubjectChoiceController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/computer_science_ia/Flashcard.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/computer_science_ia/FlashcardQueue.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/computer_science_ia/Handling/FileHandling.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/computer_science_ia/Handling/FilePathHandling.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/computer_science_ia/Handling/JSONDeserializer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/computer_science_ia/Handling/JSONHandling.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/computer_science_ia/Handling/LabelHandling.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/computer_science_ia/Handling/SearchHandling.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/computer_science_ia/HomeworkWizz.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/computer_science_ia/Note.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/computer_science_ia/NotesList.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/computer_science_ia/PasswordEncryption.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/computer_science_ia/ScreenHandling.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/computer_science_ia/Task.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/computer_science_ia/TaskList.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/computer_science_ia/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/computer_science_ia/UserDataSource.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/computer_science_ia/UserSession.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Images/2889676.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Images/5994710.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Images/666201.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Images/Folder-icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Images/HomeworkWizz.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Images/download.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/computer_science_ia/addNoteScreen.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/computer_science_ia/addTaskScreen.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/computer_science_ia/editNoteScreen.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/computer_science_ia/login.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/computer_science_ia/mainMenu.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/computer_science_ia/renameTaskScreen.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/computer_science_ia/setTaskDescriptionScreen.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/computer_science_ia/setTaskDueDateScreen.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/computer_science_ia/setTaskPriorityScreen.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/computer_science_ia/setTaskStatusScreen.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/computer_science_ia/signup.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/computer_science_ia/subjectChoice.fxml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectCodeStyleSettingsMigration">
+    <option name="version" value="2" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 8
+}</component>
+  <component name="ProjectId" id="2TyeDUu5Pf0pW0mt5ePdol0zCV1" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Downloaded.Files.Path.Enabled": "true",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "false",
+    "Repository.Attach.Sources": "false",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "master",
+    "last_opened_file_path": "C:/Users/khkon/IdeaProjects/Computer_Science_IA/src/main/resources/com/example/computer_science_ia",
+    "project.structure.last.edited": "Libraries",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.1150748"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\khkon\IdeaProjects\Computer_Science_IA\src\main\resources\com\example\computer_science_ia" />
+      <recent name="C:\Users\khkon\IdeaProjects\Computer_Science_IA\src\main\resources" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\khkon\IdeaProjects\Computer_Science_IA\src\main\resources" />
+      <recent name="C:\Users\khkon\IdeaProjects\Computer_Science_IA\src\main\java" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.example.computer_science_ia" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.example.computer_science_ia.Controllers" />
+      <recent name="com.example.computer_science_ia.Handling" />
+      <recent name="com.example.computer_science_ia" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="HomeworkWizz" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="com.example.computer_science_ia.HomeworkWizz" />
+      <module name="Computer_Science_IA" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="421fb70f-6cfd-4f4f-a395-b0fff41e15c0" name="Changes" comment="" />
+      <created>1692019630813</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1692019630813</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName="*.db" />
+  </component>
+  <component name="XDebuggerManager">
+    <pin-to-top-manager>
+      <pinned-members>
+        <PinnedItemInfo parentTag="com.example.computer_science_ia.User" memberName="tasks" />
+      </pinned-members>
+    </pin-to-top-manager>
+  </component>
+</project>
