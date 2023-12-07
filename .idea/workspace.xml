@@ -9,55 +9,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="421fb70f-6cfd-4f4f-a395-b0fff41e15c0" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/artifacts/Computer_Science_IA_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/computer_science_ia/Controllers/AddDeckController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/computer_science_ia/Controllers/AddFlashcardController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/computer_science_ia/Controllers/AddFolderController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/computer_science_ia/Controllers/FlashcardController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/computer_science_ia/Controllers/FlashcardDeckController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/computer_science_ia/Controllers/RenameDeckController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/computer_science_ia/Controllers/RenameFlashcardAnswerController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/computer_science_ia/Controllers/RenameFlashcardQuestionController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/computer_science_ia/Controllers/RenameFolderController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/computer_science_ia/FlashcardDeckList.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/computer_science_ia/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/computer_science_ia/addDeckScreen.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/computer_science_ia/addFolderScreen.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/computer_science_ia/addNewFlashcardScreen.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/computer_science_ia/flashcardDeckScreen.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/computer_science_ia/flashcardScreen.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/computer_science_ia/renameDeckScreen.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/computer_science_ia/renameFlashcardAnswerScreen.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/computer_science_ia/renameFolderScreen.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+    <list default="true" id="421fb70f-6cfd-4f4f-a395-b0fff41e15c0" name="Changes" comment="Yes">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/computer_science_ia/Controllers/AddNoteController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/computer_science_ia/Controllers/AddNoteController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/computer_science_ia/Controllers/AddTaskController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/computer_science_ia/Controllers/AddTaskController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/computer_science_ia/Controllers/EditNoteController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/computer_science_ia/Controllers/EditNoteController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/computer_science_ia/Controllers/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/computer_science_ia/Controllers/LoginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/computer_science_ia/Controllers/MainMenuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/computer_science_ia/Controllers/MainMenuController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/computer_science_ia/Controllers/SignupController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/computer_science_ia/Controllers/SignupController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/computer_science_ia/Controllers/SubjectChoiceController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/computer_science_ia/Controllers/SubjectChoiceController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/computer_science_ia/Flashcard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/computer_science_ia/Flashcard.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/computer_science_ia/FlashcardQueue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/computer_science_ia/FlashcardQueue.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/computer_science_ia/Handling/FileHandling.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/computer_science_ia/Handling/FileHandling.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/computer_science_ia/Handling/LabelHandling.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/computer_science_ia/Handling/LabelHandling.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/computer_science_ia/HomeworkWizz.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/computer_science_ia/HomeworkWizz.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/computer_science_ia/Note.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/computer_science_ia/Note.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/computer_science_ia/PasswordEncryption.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/computer_science_ia/PasswordEncryption.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/computer_science_ia/ScreenHandling.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/computer_science_ia/ScreenHandling.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/computer_science_ia/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/computer_science_ia/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/computer_science_ia/UserDataSource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/computer_science_ia/UserDataSource.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/computer_science_ia/UserSession.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/computer_science_ia/UserSession.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/computer_science_ia/mainMenu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/computer_science_ia/mainMenu.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/computer_science_ia/renameTaskScreen.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/computer_science_ia/renameTaskScreen.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/computer_science_ia/setTaskDescriptionScreen.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/computer_science_ia/setTaskDescriptionScreen.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/computer_science_ia/setTaskDueDateScreen.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/computer_science_ia/setTaskDueDateScreen.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/computer_science_ia/setTaskPriorityScreen.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/computer_science_ia/setTaskPriorityScreen.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/computer_science_ia/setTaskStatusScreen.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/computer_science_ia/setTaskStatusScreen.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -149,10 +102,23 @@
       <option name="presentableId" value="Default" />
       <updated>1692019630813</updated>
     </task>
+    <task id="LOCAL-00001" summary="Yes">
+      <option name="closed" value="true" />
+      <created>1701944794587</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1701944794587</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="UnknownFeatures">
     <option featureType="com.intellij.fileTypeFactory" implementationName="*.db" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Yes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Yes" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
