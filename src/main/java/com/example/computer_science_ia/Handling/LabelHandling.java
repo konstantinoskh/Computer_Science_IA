@@ -13,7 +13,7 @@ public class LabelHandling {
     }
 
     // Method to only display wanted error message
-    public void showErrorMessage (Label errorMessage) {
+    public void showLabel(Label errorMessage) {
         for (Label label : LABELS) {
             label.setVisible(label.getText().equals(errorMessage.getText()));
         }

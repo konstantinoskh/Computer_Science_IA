@@ -49,9 +49,9 @@ public class AddTaskController {
 
         Task task = new Task(taskTitleField.getText(), taskDescriptionField.getText(), taskDueDate.getValue(), status, priority);
         if (taskTitleField.getText().isEmpty() || taskDescriptionField.getText().isEmpty() || taskDueDate.getValue() == null || taskStatusComboBox.getValue() == null || taskPriorityComboBox.getValue() == null) {
-            labelHandling.showErrorMessage(missingInformationLabel);
+            labelHandling.showLabel(missingInformationLabel);
         }else if (controller.taskExists(task)) {
-            labelHandling.showErrorMessage(taskAlreadyExistsLabel);
+            labelHandling.showLabel(taskAlreadyExistsLabel);
         }else {
             controller.addTask(task);
             stage.close();

@@ -1,6 +1,5 @@
 package com.example.computer_science_ia;
 
-import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
@@ -30,19 +29,18 @@ public class User {
     @JsonProperty("tasks") //Specify that tasks are a property for when the user data is serialised
     private TaskList tasks;
 
-    @JsonProperty("flashcards") //Specify that flashcards are a property for when the user data is serialised
-    private FlashcardQueue flashcards;
+    @JsonProperty("flashcard_deck_list") //Specify that flashcards are a property for when the user data is serialised
+    private FlashcardDeckList flashcardDeckList;
 
-    //For when I need to initialise every user detail to store in the user's JSON file
-    @JsonCreator
-    public User(@JsonProperty("username") String username, @JsonProperty("password") String password, @JsonProperty("subjects") ArrayList<String> subjects, @JsonProperty("notes") NotesList notes, @JsonProperty("tasks") TaskList tasks, @JsonProperty("flashcards") FlashcardQueue flashcards) throws SQLException {
-        this.USERNAME = username;
-        this.PASSWORD = password;
-        this.subjects = subjects;
-        this.notes = notes;
-        this.tasks = tasks;
-        this.flashcards = flashcards;
-        hashedPassword = UserDataSource.getHashedPassword(username); //Uses the encryption method from the encryption class to secure passwords
+
+    public User(){
+        USERNAME = "";
+        PASSWORD = "";
+        notes = new NotesList();
+        subjects = new ArrayList<>();
+        hashedPassword = "";
+        tasks = new TaskList();
+        flashcardDeckList = new FlashcardDeckList();
     }
 
     //For when I need to only initialise the username and password
@@ -53,7 +51,7 @@ public class User {
         this.subjects = new ArrayList<>();
         hashedPassword = UserDataSource.getHashedPassword(username); //Uses the encryption method from the encryption class to secure passwords
         this.tasks = new TaskList();
-        this.flashcards = new FlashcardQueue();
+        this.flashcardDeckList = new FlashcardDeckList();
     }
 
     public String getUsername() {
@@ -73,12 +71,12 @@ public class User {
         this.tasks = tasks;
     }
 
-    public FlashcardQueue getFlashcards() {
-        return flashcards;
+    public FlashcardDeckList getFlashcardDeckList() {
+        return flashcardDeckList;
     }
 
-    public void setFlashcards(FlashcardQueue flashcards) {
-        this.flashcards = flashcards;
+    public void setFlashcardDeckList(FlashcardDeckList flashcardDeckList) {
+        this.flashcardDeckList = flashcardDeckList;
     }
 
     public String getHashedPassword() {

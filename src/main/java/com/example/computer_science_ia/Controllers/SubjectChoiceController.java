@@ -51,7 +51,7 @@ public class SubjectChoiceController {
     // Method to handle the back button
     @FXML
     public void backButton() {
-        ScreenHandling.loadFXMLScreenInSameWindow(stage, "login.fxml", "Log In", 520, 400, false);
+        ScreenHandling.loadFXMLScreen(stage, "login.fxml", "Log In", 520, 400, false, this);
     }
 
     // Method to handle the confirm button
@@ -80,7 +80,7 @@ public class SubjectChoiceController {
             FileHandling.createSubjectFolders(subjects); // Creates the folders for each subject
 
 
-            ScreenHandling.loadFXMLScreenInSameWindow(stage, "mainMenu.fxml", "Main Menu", 900, 600, true);
+            ScreenHandling.loadFXMLScreen(stage, "mainMenu.fxml", "Main Menu", 900, 600, true, this);
         }
     }
 

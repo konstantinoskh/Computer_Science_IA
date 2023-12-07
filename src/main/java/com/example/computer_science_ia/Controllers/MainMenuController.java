@@ -1,9 +1,9 @@
 package com.example.computer_science_ia.Controllers;
 
-import com.example.computer_science_ia.*;
 import com.example.computer_science_ia.Handling.*;
+import com.example.computer_science_ia.*;
 import javafx.application.Platform;
-import javafx.event.ActionEvent;
+import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
@@ -11,12 +11,18 @@ import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseButton;
 import javafx.scene.input.MouseEvent;
+import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 
 import java.io.File;
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.StandardCopyOption;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Objects;
 
 public class MainMenuController {
     @FXML
@@ -54,10 +60,6 @@ public class MainMenuController {
     @FXML
     private Button fileListViewBackButton;
     @FXML
-    private ContextMenu fileListViewContextMenu;
-    @FXML
-    private MenuItem deleteMenuItem;
-    @FXML
     private NotesList currentNotesList;
     @FXML
     private TaskList currentTaskList;
@@ -65,6 +67,7 @@ public class MainMenuController {
     private ContextMenu sortContextMenu;
     @FXML
     private Button sortButton;
+    ObservableList<String> items;
     private Stage stage;
     public static FilePathHandling currentFilePath;
     private LabelHandling labelHandling;
@@ -93,12 +96,84 @@ public class MainMenuController {
             populateNoteListView();
             populateTaskListView();
 
+            items = fileListView.getItems();
+            fileListView.setItems(items);
+
             Scene scene = noUserInputLabel.getScene();
             scene.getWindow().setOnCloseRequest(windowEvent -> {
                 saveNotesListContent();
                 saveTaskListContent();
             });
         });
+    }
+
+    public void loadFlashcardScreen(){
+        saveNotesListContent();
+        saveTaskListContent();
+        ScreenHandling.loadFXMLScreen(stage, "flashcardScreen.fxml", "Flashcards", 900, 600, true, this);
+    }
+
+    public void deleteFile() {
+        String selectedItem = fileListView.getSelectionModel().getSelectedItem();
+        if (selectedItem == null) {
+            return; // No file selected, nothing to delete.
+        }
+        File selectedFile = FileHandling.createFile(selectedItem, currentFilePath);
+        deleteRecursive(selectedFile);
+
+        fileListView.getItems().removeIf(item -> item.equals(selectedItem));
+    }
+
+    private void deleteRecursive(File file) {
+        if (file.isDirectory()) {
+            File[] files = file.listFiles();
+            if (files != null) {
+                for (File subFile : files) {
+                    deleteRecursive(subFile);
+                }
+            }
+        }
+        // Delete the file or empty directory.
+        if (!file.delete()) {
+            System.err.println("Failed to delete file: " + file.getAbsolutePath());
+        }
+    }
+
+    public void loadRenameFolderScreen(){
+        String folderName = fileListView.getSelectionModel().getSelectedItem();
+        ScreenHandling.loadFXMLScreen("renameFolderScreen.fxml", "Rename Folder: " + folderName, 359, 234, false, this);
+    }
+
+    public void loadNewFolderScreen(){
+        ScreenHandling.loadFXMLScreen("addFolderScreen.fxml", "New Folder", 359, 234, false, this);
+    }
+
+    public void addFile(String folderName) {
+        fileListView.getItems().add(folderName);
+    }
+
+    public void uploadFile() throws IOException {
+        FileChooser fileChooser = new FileChooser();
+        Stage primaryStage = (Stage) closeButton.getScene().getWindow();
+        File selectedFile = fileChooser.showOpenDialog(primaryStage);
+        File destinationFolder = new File(currentFilePath.getCurrentPath());
+        if (selectedFile != null && !selectedFile.isDirectory()){
+            Path sourcePath = selectedFile.toPath();
+            Path destinationPath = destinationFolder.toPath().resolve(selectedFile.getName());
+
+            Files.move(sourcePath, destinationPath, StandardCopyOption.REPLACE_EXISTING);
+            addFile(selectedFile.getName());
+        }
+    }
+
+    public File returnCurrentFile(){
+        String currentFile = fileListView.getSelectionModel().getSelectedItem();
+        return new File(currentFilePath.getCurrentPath(), currentFile);
+    }
+
+    public void refreshFileListView(String newName){
+        int index = fileListView.getSelectionModel().getSelectedIndex();
+        items.set(index, newName);
     }
 
     public void onTaskListViewClick(MouseEvent mouseEvent) {
@@ -157,6 +232,12 @@ public class MainMenuController {
         if (task!= null) {
             ScreenHandling.loadFXMLScreen("setTaskPriorityScreen.fxml", "Set Task Priority: " + selectedTaskTitle, 359, 234, false, this);
         }
+    }
+
+    public void deleteTask(){
+        String selectedTaskTitle = taskListView.getSelectionModel().getSelectedItem();
+        currentTaskList.deleteNoteByTitle(selectedTaskTitle);
+        taskListView.getItems().removeIf(task -> (Objects.equals(task, selectedTaskTitle)));
     }
 
     public void setTaskTitle(String selectedTaskTitle, String newTitle) {
@@ -311,17 +392,28 @@ public class MainMenuController {
 
     // Method to handle any file click in the fileListView
     @FXML
-    public void onFileClick(){
-        String selectedFileName = fileListView.getSelectionModel().getSelectedItem();
-        File selectedFile = new File(currentFilePath.getCurrentPath(), selectedFileName);
+    public void onFileClick(MouseEvent mouseEvent) {
+        if (mouseEvent.getClickCount() == 2) {
+            String selectedFileName = fileListView.getSelectionModel().getSelectedItem();
+            File selectedFile;
+            try {
+                selectedFile = new File(currentFilePath.getCurrentPath(), selectedFileName);
+            } catch (NullPointerException e) {
+                selectedFile = new File(currentFilePath.getCurrentPath());
+            }
 
-        searchResults.setVisible(false);
+            searchResults.setVisible(false);
 
-        if (!selectedFileName.isEmpty()) {
-            if (selectedFile.isDirectory()) {
-                onFolderCLick(selectedFile);
-            }else {
-                FileHandling.openFile(selectedFile);
+            try {
+                if (!selectedFileName.isEmpty()) {
+                    if (selectedFile.isDirectory()) {
+                        onFolderCLick(selectedFile);
+                    } else {
+                        FileHandling.openFile(selectedFile);
+                    }
+                }
+            } catch (NullPointerException e) {
+                e.printStackTrace();
             }
         }
     }
@@ -379,13 +471,13 @@ public class MainMenuController {
         String userInput = searchBar.getText();
 
         if (userInput.isEmpty()) {
-            labelHandling.showErrorMessage(noUserInputLabel);
+            labelHandling.showLabel(noUserInputLabel);
         }else{
             File rootDirectory = new File(UserSession.getLoggedInUsername());
             ArrayList<File> results = SearchHandling.find(rootDirectory, userInput);
 
             if (results.isEmpty()) {
-                labelHandling.showErrorMessage(noFileFoundLabel);
+                labelHandling.showLabel(noFileFoundLabel);
             }else {
                 for (File file : results) {
                     searchResults.getItems().add(file.getName());
@@ -428,34 +520,6 @@ public class MainMenuController {
     public void fileListViewCloseButton() {
         setFileListViewVisibility(false);
     }
-
-
-    public void renameContextMenuItem(ActionEvent actionEvent) {
-    }
-
-    public void uploadFile(ActionEvent actionEvent) {
-    }
-
-    public void deleteFile(ActionEvent actionEvent) {
-    }
-
-    public void backButton(ActionEvent actionEvent) {
-    }
-
-    public void closeButton(ActionEvent actionEvent) {
-    }
-
-    public void saveText(ActionEvent actionEvent) {
-    }
-
-    public void addButton(ActionEvent actionEvent) {
-    }
-
-    public void toDoListClear(ActionEvent actionEvent) {
-    }
-
-
-
 
     public void onNotesListViewClick(MouseEvent mouseEvent) {
         if (mouseEvent.getButton() == MouseButton.SECONDARY) {

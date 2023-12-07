@@ -40,12 +40,13 @@ public class ScreenHandling {
         }
     }
 
-    public static void loadFXMLScreenInSameWindow(Stage stage, String fxmlFilePath, String title, int width, int height, boolean isResizable) {
+    public static void loadFXMLScreen(Stage stage, String fxmlFilePath, String title, int width, int height, boolean isResizable, Object userData) {
         try {
             FXMLLoader fxmlLoader = new FXMLLoader(ScreenHandling.class.getResource(fxmlFilePath));
 
             stage.setTitle(title);
             stage.setResizable(isResizable);
+            stage.setUserData(userData);
 
             String imagePath = "/Images/HomeworkWizz.jpg"; // Relative path to the image
             URL imageUrl = ScreenHandling.class.getResource(imagePath);

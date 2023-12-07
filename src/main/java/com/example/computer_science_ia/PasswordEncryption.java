@@ -1,6 +1,5 @@
 package com.example.computer_science_ia;
-
-import org.mindrot.jbcrypt.BCrypt;
+import org.mindrot.jbcrypt.*;
 
 public class PasswordEncryption {
 

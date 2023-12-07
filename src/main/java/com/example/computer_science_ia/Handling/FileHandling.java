@@ -6,6 +6,7 @@ import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.awt.Desktop;
+import java.util.LinkedList;
 
 public class FileHandling {
 
@@ -37,5 +38,9 @@ public class FileHandling {
         }catch (IOException e){
             e.printStackTrace();
         }
+    }
+
+    public static File createFile(String fileName, FilePathHandling currentFilePath){
+        return new File(currentFilePath.getCurrentPath(), fileName);
     }
 }

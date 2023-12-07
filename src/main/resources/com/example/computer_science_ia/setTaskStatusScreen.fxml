@@ -9,23 +9,25 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="234.0" prefWidth="359.0" style="-fx-background-color: e5f3fd;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.computer_science_ia.Controllers.SetTaskStatusController">
-   <children>
-      <AnchorPane prefHeight="235.0" prefWidth="359.0">
-         <children>
-            <Button fx:id="confirmButton" layoutX="150.0" layoutY="143.0" mnemonicParsing="false" onAction="#setTaskStatus" text="Confirm">
-               <cursor>
-                  <Cursor fx:constant="HAND" />
-               </cursor>
-            </Button>
-            <Text layoutX="119.0" layoutY="77.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Enter new task status">
-               <font>
-                  <Font name="Century Gothic" size="12.0" />
-               </font>
-            </Text>
-            <Label fx:id="missingTaskStatusLabel" layoutX="106.0" layoutY="169.0" nodeOrientation="LEFT_TO_RIGHT" onKeyPressed="#handleEnterKey" text="Please enter new task status" textFill="RED" visible="false" />
-            <ComboBox fx:id="newTaskStatus" layoutX="104.0" layoutY="83.0" onMousePressed="#handleEnterKey" prefWidth="150.0" />
-         </children>
-      </AnchorPane>
-   </children>
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="234.0"
+      prefWidth="359.0" style="-fx-background-color: e5f3fd;" xmlns="http://javafx.com/javafx/19"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.example.computer_science_ia.Controllers.SetTaskStatusController">
+   <AnchorPane prefHeight="235.0" prefWidth="359.0">
+      <Button fx:id="confirmButton" layoutX="150.0" layoutY="143.0" mnemonicParsing="false" onAction="#setTaskStatus"
+              text="Confirm">
+         <cursor>
+            <Cursor fx:constant="HAND"/>
+         </cursor>
+      </Button>
+      <Text layoutX="119.0" layoutY="77.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Enter new task status">
+         <font>
+            <Font name="Century Gothic" size="12.0"/>
+         </font>
+      </Text>
+      <Label fx:id="missingTaskStatusLabel" layoutX="106.0" layoutY="169.0" nodeOrientation="LEFT_TO_RIGHT"
+             onKeyPressed="#handleEnterKey" text="Please enter new task status" textFill="RED" visible="false"/>
+      <ComboBox fx:id="newTaskStatus" layoutX="104.0" layoutY="83.0" onKeyPressed="#handleEnterKey" onMousePressed="#setTaskStatus"
+                prefWidth="150.0"/>
+   </AnchorPane>
 </VBox>

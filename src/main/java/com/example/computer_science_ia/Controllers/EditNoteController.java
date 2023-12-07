@@ -36,9 +36,9 @@ public class EditNoteController {
 
         MainMenuController controller = ((MainMenuController) subjectField.getScene().getWindow().getUserData());
         if (subjectField.getText().isEmpty() || titleField.getText().isEmpty() || contentTextArea.getText().isEmpty()) {
-            labelHandling.showErrorMessage(missingInformationLabel);
+            labelHandling.showLabel(missingInformationLabel);
         }else if (controller.noteExists(noteTitle)) {
-            labelHandling.showErrorMessage(noteExists);
+            labelHandling.showLabel(noteExists);
         }else{
             controller.setNoteDetails(noteTitle, subjectField.getText(), titleField.getText(), contentTextArea.getText());
             stage.close();

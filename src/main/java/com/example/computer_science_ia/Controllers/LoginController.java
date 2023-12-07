@@ -71,13 +71,13 @@ public class LoginController {
         User user = new User(username, password);
 
         if (username.isEmpty()){
-            errorMessageHandling.showErrorMessage(enterUsernameLabel);
+            errorMessageHandling.showLabel(enterUsernameLabel);
         }else if (!userDataSource.userExists(username)) {
-            errorMessageHandling.showErrorMessage(userDoesntExistLabel);
+            errorMessageHandling.showLabel(userDoesntExistLabel);
         }else if (password.isEmpty()){
-            errorMessageHandling.showErrorMessage(enterPasswordLabel);
+            errorMessageHandling.showLabel(enterPasswordLabel);
         }else if (!userDataSource.verifyPassword(user)){
-            errorMessageHandling.showErrorMessage(passwordIsIncorrectLabel);
+            errorMessageHandling.showLabel(passwordIsIncorrectLabel);
         }else {
             File userFolder = FileHandling.createUserFolder(user.getUsername()); //Create the user folder if it doesn't exist
             JSONHandling.createUserJSONFile(user); //Serialize the user's data to a JSON file
@@ -87,21 +87,21 @@ public class LoginController {
             if (files.length == 1){
                 userDataSource.closeConnection();
 
-                ScreenHandling.loadFXMLScreenInSameWindow(stage, "subjectChoice.fxml", "Subject Choice", 900, 600, true);
+                ScreenHandling.loadFXMLScreen(stage, "subjectChoice.fxml", "Subject Choice", 900, 600, true, this);
             }else {
                 User sessionUser = JSONHandling.deserializeJSONFile();
                 assert sessionUser != null;
                 UserSession.setSubjects(sessionUser.getSubjects());
                 userDataSource.closeConnection();
 
-                ScreenHandling.loadFXMLScreenInSameWindow(stage,"mainMenu.fxml", "Main Menu", 900, 600, true);
+                ScreenHandling.loadFXMLScreen(stage,"mainMenu.fxml", "Main Menu", 900, 600, true, this);
             }
         }
     }
 
     // Method to handle signup button press
     public void signup() {
-        ScreenHandling.loadFXMLScreenInSameWindow(stage, "signup.fxml", "Sign Up", 520, 400, false);
+        ScreenHandling.loadFXMLScreen(stage, "signup.fxml", "Sign Up", 520, 400, false, this);
     }
 
     // Method to handle enter key press

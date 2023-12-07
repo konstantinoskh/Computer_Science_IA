@@ -22,10 +22,11 @@
 
 <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" style="-fx-background-color: e5f3fd;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.computer_science_ia.Controllers.MainMenuController">
     <VBox prefHeight="600.0" prefWidth="58.0" style="-fx-background-color: e5f3fd;" HBox.hgrow="ALWAYS">
-        <GridPane prefHeight="171.0" prefWidth="218.0" VBox.vgrow="ALWAYS">
+        <GridPane prefHeight="126.0" prefWidth="216.0" VBox.vgrow="ALWAYS">
             <columnConstraints>
                 <ColumnConstraints hgrow="SOMETIMES" maxWidth="205.6" minWidth="10.0" prefWidth="98.40001068115234" />
-                <ColumnConstraints hgrow="SOMETIMES" maxWidth="107.19998931884766" minWidth="0.0" prefWidth="107.19998931884766" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="205.6" minWidth="10.0" prefWidth="98.40001068115234" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="107.19998931884766" minWidth="0.0" prefWidth="107.19998931884766" />
             </columnConstraints>
             <rowConstraints>
                 <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
@@ -39,14 +40,25 @@
                 <ColumnConstraints hgrow="SOMETIMES" maxWidth="136.4" minWidth="10.0" prefWidth="70.40000610351564" />
             </columnConstraints>
             <rowConstraints>
-                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" />
+                <RowConstraints />
+                <RowConstraints />
+                <RowConstraints />
+                <RowConstraints />
+                <RowConstraints />
+                <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints maxHeight="0.0" minHeight="0.0" prefHeight="0.0" />
+            <RowConstraints maxHeight="37.60000610351562" minHeight="4.800018310546875" prefHeight="19.199999999999996" />
+            <RowConstraints maxHeight="43.599981689453124" minHeight="10.0" prefHeight="29.9999755859375" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
             </rowConstraints>
-            <Label fx:id="labelOne" alignment="CENTER_RIGHT" nodeOrientation="LEFT_TO_RIGHT" onMouseClicked="#subjectFolderClick" text="Label" textAlignment="RIGHT" underline="true" GridPane.halignment="RIGHT" GridPane.valignment="CENTER">
+            <Label fx:id="labelOne" alignment="CENTER_RIGHT" maxHeight="-Infinity" maxWidth="-Infinity" nodeOrientation="LEFT_TO_RIGHT" onMouseClicked="#subjectFolderClick" prefHeight="35.0" prefWidth="90.0" text="Label" textAlignment="RIGHT" underline="true" GridPane.halignment="RIGHT" GridPane.rowIndex="11" GridPane.valignment="CENTER">
                 <cursor>
                     <Cursor fx:constant="HAND" />
                 </cursor>
@@ -54,7 +66,7 @@
                     <Font name="Dubai Regular" size="20.0" />
                 </font>
             </Label>
-            <Label fx:id="labelTwo" alignment="CENTER_RIGHT" nodeOrientation="LEFT_TO_RIGHT" onMouseClicked="#subjectFolderClick" text="Label" textAlignment="RIGHT" underline="true" GridPane.halignment="RIGHT" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+            <Label fx:id="labelTwo" alignment="CENTER_RIGHT" maxHeight="-Infinity" maxWidth="-Infinity" nodeOrientation="LEFT_TO_RIGHT" onMouseClicked="#subjectFolderClick" prefHeight="35.0" prefWidth="90.0" text="Label" textAlignment="RIGHT" underline="true" GridPane.halignment="RIGHT" GridPane.rowIndex="12" GridPane.valignment="CENTER">
                 <cursor>
                     <Cursor fx:constant="HAND" />
                 </cursor>
@@ -62,7 +74,7 @@
                     <Font name="Dubai Regular" size="20.0" />
                 </font>
             </Label>
-            <Label fx:id="labelThree" alignment="CENTER_RIGHT" nodeOrientation="LEFT_TO_RIGHT" onMouseClicked="#subjectFolderClick" text="Label" textAlignment="RIGHT" underline="true" GridPane.halignment="RIGHT" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+            <Label fx:id="labelThree" alignment="CENTER_RIGHT" maxHeight="-Infinity" maxWidth="-Infinity" nodeOrientation="LEFT_TO_RIGHT" onMouseClicked="#subjectFolderClick" prefHeight="35.0" prefWidth="90.0" text="Label" textAlignment="RIGHT" underline="true" GridPane.halignment="RIGHT" GridPane.rowIndex="13" GridPane.valignment="CENTER">
                 <cursor>
                     <Cursor fx:constant="HAND" />
                 </cursor>
@@ -70,7 +82,7 @@
                     <Font name="Dubai Regular" size="20.0" />
                 </font>
             </Label>
-            <Label fx:id="labelFour" alignment="CENTER_RIGHT" nodeOrientation="LEFT_TO_RIGHT" onMouseClicked="#subjectFolderClick" text="Label" textAlignment="RIGHT" underline="true" GridPane.halignment="RIGHT" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+            <Label fx:id="labelFour" alignment="CENTER_RIGHT" maxHeight="-Infinity" maxWidth="-Infinity" nodeOrientation="LEFT_TO_RIGHT" onMouseClicked="#subjectFolderClick" prefHeight="35.0" prefWidth="92.0" text="Label" textAlignment="RIGHT" underline="true" GridPane.halignment="RIGHT" GridPane.rowIndex="14" GridPane.valignment="CENTER">
                 <cursor>
                     <Cursor fx:constant="HAND" />
                 </cursor>
@@ -78,7 +90,7 @@
                     <Font name="Dubai Regular" size="20.0" />
                 </font>
             </Label>
-            <Label fx:id="labelFive" alignment="CENTER_RIGHT" nodeOrientation="LEFT_TO_RIGHT" onMouseClicked="#subjectFolderClick" text="Label" textAlignment="RIGHT" underline="true" GridPane.halignment="RIGHT" GridPane.rowIndex="4" GridPane.valignment="CENTER">
+            <Label fx:id="labelFive" alignment="CENTER_RIGHT" maxHeight="-Infinity" maxWidth="-Infinity" nodeOrientation="LEFT_TO_RIGHT" onMouseClicked="#subjectFolderClick" prefHeight="35.0" prefWidth="89.0" text="Label" textAlignment="RIGHT" underline="true" GridPane.halignment="RIGHT" GridPane.rowIndex="15" GridPane.valignment="CENTER">
                 <cursor>
                     <Cursor fx:constant="HAND" />
                 </cursor>
@@ -86,7 +98,7 @@
                     <Font name="Dubai Regular" size="20.0" />
                 </font>
             </Label>
-            <Label fx:id="labelSix" alignment="CENTER_RIGHT" nodeOrientation="LEFT_TO_RIGHT" onMouseClicked="#subjectFolderClick" text="Label" textAlignment="RIGHT" underline="true" GridPane.halignment="RIGHT" GridPane.rowIndex="5" GridPane.valignment="CENTER">
+            <Label fx:id="labelSix" alignment="CENTER_RIGHT" maxHeight="-Infinity" maxWidth="-Infinity" nodeOrientation="LEFT_TO_RIGHT" onMouseClicked="#subjectFolderClick" prefHeight="35.0" prefWidth="86.0" text="Label" textAlignment="RIGHT" underline="true" GridPane.halignment="RIGHT" GridPane.rowIndex="16" GridPane.valignment="CENTER">
                 <cursor>
                     <Cursor fx:constant="HAND" />
                 </cursor>
@@ -94,7 +106,7 @@
                     <Font name="Dubai Regular" size="20.0" />
                 </font>
             </Label>
-            <ImageView fitHeight="48.0" fitWidth="55.0" pickOnBounds="true" preserveRatio="true" translateX="5.0" GridPane.halignment="LEFT" GridPane.hgrow="NEVER" GridPane.valignment="CENTER" GridPane.vgrow="NEVER">
+            <ImageView fitHeight="54.0" fitWidth="49.0" pickOnBounds="true" preserveRatio="true" translateX="5.0" GridPane.halignment="LEFT" GridPane.hgrow="NEVER" GridPane.rowIndex="11" GridPane.valignment="CENTER" GridPane.vgrow="NEVER">
                 <GridPane.margin>
                     <Insets />
                 </GridPane.margin>
@@ -103,39 +115,47 @@
                 </cursor>
                 <Image url="@../../../Images/Folder-icon.png" />
             </ImageView>
-            <ImageView fitHeight="51.0" fitWidth="59.0" pickOnBounds="true" preserveRatio="true" translateX="5.0" GridPane.rowIndex="1">
+            <ImageView fitHeight="52.0" fitWidth="49.0" pickOnBounds="true" preserveRatio="true" translateX="5.0" GridPane.rowIndex="12">
                 <cursor>
                     <Cursor fx:constant="DEFAULT" />
                 </cursor>
                 <Image url="@../../../Images/Folder-icon.png" />
             </ImageView>
-            <ImageView fitHeight="50.0" fitWidth="64.0" pickOnBounds="true" preserveRatio="true" translateX="5.0" GridPane.rowIndex="2">
+            <ImageView fitHeight="50.0" fitWidth="64.0" pickOnBounds="true" preserveRatio="true" translateX="5.0" GridPane.rowIndex="13">
                 <cursor>
                     <Cursor fx:constant="DEFAULT" />
                 </cursor>
                 <Image url="@../../../Images/Folder-icon.png" />
             </ImageView>
-            <ImageView fitHeight="49.0" fitWidth="77.0" pickOnBounds="true" preserveRatio="true" translateX="5.0" GridPane.rowIndex="3">
+            <ImageView fitHeight="49.0" fitWidth="77.0" pickOnBounds="true" preserveRatio="true" translateX="5.0" GridPane.rowIndex="14">
                 <cursor>
                     <Cursor fx:constant="DEFAULT" />
                 </cursor>
                 <Image url="@../../../Images/Folder-icon.png" />
             </ImageView>
-            <ImageView fitHeight="50.0" fitWidth="58.0" pickOnBounds="true" preserveRatio="true" translateX="5.0" GridPane.rowIndex="4">
+            <ImageView fitHeight="50.0" fitWidth="58.0" pickOnBounds="true" preserveRatio="true" translateX="5.0" GridPane.rowIndex="15">
                 <cursor>
                     <Cursor fx:constant="DEFAULT" />
                 </cursor>
                 <Image url="@../../../Images/Folder-icon.png" />
             </ImageView>
-            <ImageView fitHeight="50.0" fitWidth="63.0" pickOnBounds="true" preserveRatio="true" translateX="5.0" GridPane.rowIndex="5">
+            <ImageView fitHeight="50.0" fitWidth="63.0" pickOnBounds="true" preserveRatio="true" translateX="5.0" GridPane.rowIndex="16">
                 <cursor>
                     <Cursor fx:constant="DEFAULT" />
                 </cursor>
                 <Image url="@../../../Images/Folder-icon.png" />
             </ImageView>
-            <Line endX="99.77873229980469" endY="-1.060907006263733" startX="100.89290618896484" startY="-402.5538635253906" stroke="#251981" translateY="25.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+            <Line endX="99.77873229980469" endY="-1.060907006263733" startX="100.89290618896484" startY="-402.5538635253906" stroke="#251981" translateY="25.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="13" GridPane.valignment="CENTER" />
+         <Button mnemonicParsing="false" onAction="#loadFlashcardScreen" style="-fx-background-color: none;" text="Flashcards" translateX="25.0" underline="true" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowSpan="2" GridPane.valignment="TOP" GridPane.vgrow="NEVER">
+            <font>
+               <Font name="Century Gothic" size="20.0" />
+            </font>
+            <cursor>
+               <Cursor fx:constant="HAND" />
+            </cursor>
+         </Button>
         </GridPane>
-        <GridPane alignment="BOTTOM_LEFT" prefHeight="171.0" prefWidth="218.0" VBox.vgrow="ALWAYS">
+        <GridPane alignment="BOTTOM_LEFT" prefHeight="135.0" prefWidth="216.0" VBox.vgrow="ALWAYS">
             <columnConstraints>
                 <ColumnConstraints hgrow="SOMETIMES" maxWidth="137.60000000000002" minWidth="4.000007534027105" prefWidth="73.60001220703126" />
                 <ColumnConstraints hgrow="SOMETIMES" maxWidth="133.59999246597292" minWidth="0.0" prefWidth="63.99998779296877" />
@@ -198,10 +218,10 @@
                         <Cursor fx:constant="HAND" />
                     </cursor>
                     <contextMenu>
-                        <ContextMenu fx:id="fileListViewContextMenu" autoFix="false" style="-fx-cursor: hand;">
+                        <ContextMenu autoFix="false" style="-fx-cursor: hand;">
                             <items>
-                                <MenuItem mnemonicParsing="false" onAction="#renameContextMenuItem" text="Rename" />
-                                <MenuItem text="New Folder">
+                                <MenuItem mnemonicParsing="false" onAction="#loadRenameFolderScreen" text="Rename" />
+                                <MenuItem onAction="#loadNewFolderScreen" text="New Folder">
                                     <mnemonicParsing>false</mnemonicParsing>
                                 </MenuItem>
                                 <MenuItem mnemonicParsing="false" onAction="#uploadFile" text="Upload File" />
@@ -210,7 +230,7 @@
                         </ContextMenu>
                     </contextMenu>
                 </ListView>
-                <Button fx:id="fileListViewBackButton" layoutX="338.0" layoutY="-131.0" mnemonicParsing="false" onAction="#backButton" onMouseClicked="#fileListViewBackButton" prefHeight="18.0" prefWidth="23.0" style="-fx-background-color: white;" text="&lt;-" visible="false">
+                <Button fx:id="fileListViewBackButton" layoutX="338.0" layoutY="-131.0" mnemonicParsing="false" onMouseClicked="#fileListViewBackButton" prefHeight="18.0" prefWidth="23.0" style="-fx-background-color: white;" text="&lt;-" visible="false">
                     <font>
                         <Font name="Century Gothic" size="10.0" />
                     </font>
@@ -218,7 +238,7 @@
                         <Cursor fx:constant="HAND" />
                     </cursor>
                 </Button>
-                <Button fx:id="closeButton" layoutX="362.0" layoutY="-131.0" mnemonicParsing="false" onAction="#closeButton" onMouseClicked="#fileListViewCloseButton" prefHeight="18.0" prefWidth="23.0" style="-fx-background-color: white;" text="x" visible="false">
+                <Button fx:id="closeButton" layoutX="362.0" layoutY="-131.0" mnemonicParsing="false" onMouseClicked="#fileListViewCloseButton" prefHeight="18.0" prefWidth="23.0" style="-fx-background-color: white;" text="x" visible="false">
                     <font>
                         <Font name="Century Gothic" size="10.0" />
                     </font>
@@ -255,12 +275,12 @@
                 <RowConstraints maxHeight="76.800048828125" minHeight="0.0" prefHeight="23.20001220703125" vgrow="SOMETIMES" />
             </rowConstraints>
             <AnchorPane prefHeight="30.0" prefWidth="72.0" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="3" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
-                <Text layoutX="14.0" layoutY="22.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Notes" underline="true" AnchorPane.bottomAnchor="4.876562499999999" AnchorPane.rightAnchor="166.45625">
+                <Text layoutX="10.806249999999935" layoutY="22.7203125" strokeType="OUTSIDE" strokeWidth="0.0" text="Notes" underline="true" AnchorPane.bottomAnchor="6.556249999999999" AnchorPane.rightAnchor="169.6500000000001">
                     <font>
                         <Font name="Century Gothic" size="16.0" />
                     </font>
                 </Text>
-            <Button fx:id="addNoteButton" layoutX="129.0" layoutY="3.0" mnemonicParsing="false" onAction="#loadAddNoteScreen" style="-fx-background-color: none;" text="Add" textFill="#1f2fbf" underline="true" AnchorPane.bottomAnchor="0.1999999999999993" AnchorPane.rightAnchor="54.20000000000001">
+            <Button layoutX="168.0" layoutY="7.0000000000000036" mnemonicParsing="false" onMouseClicked="#deleteNote" style="-fx-background-color: none;" text="Delete" textFill="#1f2fbf" underline="true" AnchorPane.bottomAnchor="0.19999999999999574" AnchorPane.rightAnchor="1.6000000000000227">
                <font>
                   <Font size="13.0" />
                </font>
@@ -268,7 +288,7 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </Button>
-            <Button layoutX="168.0" layoutY="3.0" mnemonicParsing="false" onAction="#toDoListClear" onMouseClicked="#deleteNote" style="-fx-background-color: none;" text="Delete" textFill="#1f2fbf" underline="true" AnchorPane.bottomAnchor="0.1999999999999993" AnchorPane.rightAnchor="1.6000000000000085">
+            <Button layoutX="131.0" layoutY="5.0" mnemonicParsing="false" onAction="#loadAddNoteScreen" style="-fx-background-color: none;" text="Add" textFill="#1f2fbf" underline="true" AnchorPane.bottomAnchor="0.5999999999999979" AnchorPane.rightAnchor="52.20000000000001">
                <font>
                   <Font size="13.0" />
                </font>
@@ -281,19 +301,20 @@
             <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="2">
                 <ListView fx:id="taskListView" onMouseClicked="#onTaskListViewClick" prefHeight="188.0" prefWidth="225.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                <contextMenu>
-                  <ContextMenu autoFix="false">
+                  <ContextMenu autoFix="false" style="-fx-cursor: hand;">
                     <items>
                       <MenuItem mnemonicParsing="false" onAction="#loadRenameTaskScreen" text="Edit Title" />
                         <MenuItem mnemonicParsing="false" onAction="#loadSetTaskDescriptionScreen" text="Edit Description" />
                         <MenuItem mnemonicParsing="false" onAction="#loadSetTaskDueDateScreen" text="Edit Due Date" />
                         <MenuItem mnemonicParsing="false" onAction="#loadSetTaskStatusScreen" text="Edit Status" />
                         <MenuItem mnemonicParsing="false" onAction="#loadSetTaskPriorityScreen" text="Edit Priority" />
+                        <MenuItem mnemonicParsing="false" onAction="#deleteTask" text="Delete task" />
                     </items>
                   </ContextMenu>
                </contextMenu></ListView>
             </AnchorPane>
             <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1">
-                <Text layoutX="13.0" layoutY="20.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Task List" underline="true" AnchorPane.bottomAnchor="3.1999999999999993" AnchorPane.leftAnchor="13.0" AnchorPane.rightAnchor="140.159375">
+                <Text layoutX="13.0" layoutY="17.7453125" strokeType="OUTSIDE" strokeWidth="0.0" text="Task List" underline="true" AnchorPane.bottomAnchor="6.731249999999999" AnchorPane.leftAnchor="13.0" AnchorPane.rightAnchor="153.159375">
                     <font>
                         <Font name="Century Gothic" size="16.0" />
                     </font>
@@ -331,7 +352,17 @@
                </contextMenu>
             </Button>
             </AnchorPane>
-         <ListView fx:id="notesListView" onMouseClicked="#onNotesListViewClick" prefHeight="200.0" prefWidth="200.0" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="4" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+         <ListView fx:id="notesListView" onMouseClicked="#onNotesListViewClick" prefHeight="200.0" prefWidth="200.0" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="4" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+            <contextMenu>
+               <ContextMenu autoFix="false">
+                 <items>
+                     <MenuItem mnemonicParsing="false" text="Unspecified Action" />
+                   <MenuItem mnemonicParsing="false" text="Edit subject" />
+                     <MenuItem mnemonicParsing="false" text="Unspecified Action" />
+                     <MenuItem mnemonicParsing="false" text="Unspecified Action" />
+                 </items>
+               </ContextMenu>
+            </contextMenu></ListView>
         </GridPane>
     </VBox>
 </HBox>

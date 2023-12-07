@@ -31,9 +31,9 @@ public class AddNoteController {
         ArrayList<Label> labels = new ArrayList<>(Arrays.asList(noteAlreadyExistsLabel, missingInformationLabel));
         LabelHandling labelHandling = new LabelHandling(labels);
         if (subjectField.getText().isEmpty() || titleField.getText().isEmpty() || contentTextArea.getText().isEmpty()) {
-            labelHandling.showErrorMessage(missingInformationLabel);
+            labelHandling.showLabel(missingInformationLabel);
         }else if (controller.noteExists(titleField.getText())) {
-            labelHandling.showErrorMessage(noteAlreadyExistsLabel);
+            labelHandling.showLabel(noteAlreadyExistsLabel);
         }else {
             controller.addNote(subjectField.getText(), titleField.getText(), contentTextArea.getText());
             stage.close();

@@ -1,4 +1,5 @@
 package com.example.computer_science_ia;
+
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 

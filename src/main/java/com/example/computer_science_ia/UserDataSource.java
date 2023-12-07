@@ -53,7 +53,7 @@ public class UserDataSource {
     //Method to insert a new user into the database
     public void insertUser(User user) throws SQLException {
         Statement statement = connection.createStatement();
-        String encryptedPassword = PasswordEncryption.encrypt(user.getPassword()); //Uses the encryption method from the
+        String encryptedPassword = PasswordEncryption.encrypt(user.getPassword());
         statement.execute("INSERT INTO " + TABLE_USERS +
                 " (" + COLUMN_USERNAME + ", " +
                        COLUMN_PASSWORD + ") VALUES ('" + user.getUsername() + "', '" + encryptedPassword + "' )");

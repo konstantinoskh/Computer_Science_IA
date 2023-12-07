@@ -77,24 +77,24 @@ public class SignupController {
 
         // Validation of the username, password and confirmed password
         if (username.isEmpty()){
-            errorMessageHandling.showErrorMessage(usernameLengthLabel);
+            errorMessageHandling.showLabel(usernameLengthLabel);
         }else if (userDataSource.userExists(username)){
-            errorMessageHandling.showErrorMessage(accountAlreadyExistsLabel);
+            errorMessageHandling.showLabel(accountAlreadyExistsLabel);
         }else if(password.length() < 8){
-            errorMessageHandling.showErrorMessage(passwordLengthLabel);
+            errorMessageHandling.showLabel(passwordLengthLabel);
         }else if (!password.equals(confirmedPassword)){
-            errorMessageHandling.showErrorMessage(confirmPasswordLabel);
+            errorMessageHandling.showLabel(confirmPasswordLabel);
         }else {
             User user = new User(username, password);
             userDataSource.insertUser(user); // Inserts the user into the database
             userDataSource.closeConnection(); // Closes the connection
-            ScreenHandling.loadFXMLScreenInSameWindow(stage, "login.fxml", "Log In", 520, 400, false);
+            ScreenHandling.loadFXMLScreen(stage, "login.fxml", "Log In", 520, 400, false, this);
         }
     }
 
     // Method to handle the back button
     public void backButton() {
-        ScreenHandling.loadFXMLScreenInSameWindow(stage, "login.fxml", "Log In", 520, 400, false);
+        ScreenHandling.loadFXMLScreen(stage, "login.fxml", "Log In", 520, 400, false, this);
     }
 
     // Method to handle the enter key
