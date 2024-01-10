@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="234.0" prefWidth="359.0" style="-fx-background-color: e5f3fd;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.computer_science_ia.Controllers.EditNoteContentController">
+   <AnchorPane prefHeight="243.0" prefWidth="365.0">
+      <Button fx:id="confirmButton" layoutX="150.0" layoutY="176.0" mnemonicParsing="false" onAction="#editNote" onKeyPressed="#handleEnterKey" prefWidth="59.0" text="Confirm">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Text layoutX="137.0" layoutY="90.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Update content:" />
+      <Label fx:id="blankContentField" layoutX="113.0" layoutY="202.0" text="Please input new content" textFill="RED" visible="false" />
+      <TextArea fx:id="newContent" layoutX="80.0" layoutY="104.0" prefHeight="54.0" prefWidth="200.0" wrapText="true" />
+   </AnchorPane>
+</VBox>

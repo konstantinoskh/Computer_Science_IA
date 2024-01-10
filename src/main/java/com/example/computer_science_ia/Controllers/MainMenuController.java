@@ -522,10 +522,7 @@ public class MainMenuController {
     }
 
     public void onNotesListViewClick(MouseEvent mouseEvent) {
-        if (mouseEvent.getButton() == MouseButton.SECONDARY) {
-            String noteTitle = notesListView.getSelectionModel().getSelectedItem();
-            loadEditNoteScreen(noteTitle);
-        }else if (mouseEvent.getClickCount() == 2) {
+        if (mouseEvent.getClickCount() == 2) {
             String noteTitle = notesListView.getSelectionModel().getSelectedItem();
             Note selectedNote = currentNotesList.getNoteByTitle(noteTitle);
             if (selectedNote != null) {
@@ -534,11 +531,31 @@ public class MainMenuController {
         }
     }
 
-    private void loadEditNoteScreen(String selectedNoteTitle) {
+
+    public void loadEditNoteSubjectScreen() {
+        String selectedNoteTitle = notesListView.getSelectionModel().getSelectedItem();
         Note note = currentNotesList.getNoteByTitle(selectedNoteTitle);
         if (note!= null) {
-            ScreenHandling.loadFXMLScreen("editNoteScreen.fxml", "Edit Note: " + selectedNoteTitle, 359, 234, false, this);
+            ScreenHandling.loadFXMLScreen("editNoteSubjectScreen.fxml", "Edit Note: " + selectedNoteTitle, 359, 234, false, this);
         }
+    }
+
+    public void loadEditNoteTitleScreen(){
+        String selectedNoteTitle = notesListView.getSelectionModel().getSelectedItem();
+        Note note = currentNotesList.getNoteByTitle(selectedNoteTitle);
+        if (note!= null) {
+            ScreenHandling.loadFXMLScreen("editNoteTitleScreen.fxml", "Edit Note: " + selectedNoteTitle, 359, 234, false, this);
+        }
+
+    }
+
+    public void loadEditNoteContentScreen(){
+        String selectedNoteTitle = notesListView.getSelectionModel().getSelectedItem();
+        Note note = currentNotesList.getNoteByTitle(selectedNoteTitle);
+        if (note!= null) {
+            ScreenHandling.loadFXMLScreen("editNoteContentScreen.fxml", "Edit Note: " + selectedNoteTitle, 359, 234, false, this);
+        }
+
     }
 
     private void showNoteDetails(Note note) {
@@ -568,15 +585,34 @@ public class MainMenuController {
         }
     }
 
-    private void updateNoteListView(String noteTitle, String newTitle){
-        ArrayList<String> notes = (ArrayList<String>) notesListView.getItems();
-
-        for (String note : notes){
-            if (note.equals(noteTitle)){
-                notesListView.getItems().remove(note);
-                notesListView.getItems().add(newTitle);
-            }
+    public void setNoteSubject(String noteTitle, String subject) {
+        Note selectedNote = currentNotesList.getNoteByTitle(noteTitle);
+        if (selectedNote!=null) {
+            selectedNote.setSubject(subject);
+            updateNoteListView(noteTitle,noteTitle);
         }
+    }
+
+    public void setNoteTitle(String noteTitle, String newTitle) {
+        Note selectedNote = currentNotesList.getNoteByTitle(noteTitle);
+        if (selectedNote!=null) {
+            selectedNote.setTitle(newTitle);
+            updateNoteListView(noteTitle,newTitle);
+        }
+    }
+
+    public void setNoteContent(String noteTitle, String newContent) {
+        Note selectedNote = currentNotesList.getNoteByTitle(noteTitle);
+        if (selectedNote!=null) {
+            selectedNote.setContent(newContent);
+            updateNoteListView(noteTitle,noteTitle);
+        }
+    }
+
+
+    private void updateNoteListView(String noteTitle, String newTitle){
+        notesListView.getItems().removeIf(x -> x.equals(noteTitle));
+        notesListView.getItems().add(newTitle);
     }
 
     public void deleteNote(){

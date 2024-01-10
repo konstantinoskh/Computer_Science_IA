@@ -109,15 +109,15 @@ public class FlashcardDeckController {
 
     public void nextButton(){
         if (!selectedFlashcardQueue.isEmpty()){
-            showAnswerButton.setVisible(true);
-            FlashcardDifficulty difficulty = flashcardDifficultyComboBox.getValue();
             Flashcard reviewedFlashcard = selectedFlashcardQueue.dequeue();
-
-            if  (difficulty != null){
-                flashcardDifficultyComboBox.setVisible(false);
-                reviewedFlashcard.setDifficulty(difficulty);
+            if (flashcardDifficultyComboBox.isVisible()){
+                FlashcardDifficulty difficulty = flashcardDifficultyComboBox.getValue();
+                if (difficulty != null){
+                    flashcardDifficultyComboBox.setVisible(false);
+                    reviewedFlashcard.setDifficulty(difficulty);
+                }
+                showAnswerButton.setVisible(true);
             }
-
             reviewedFlashcardQueue.enqueue(reviewedFlashcard);
             Flashcard nextFlashcard;
             try{
@@ -142,6 +142,40 @@ public class FlashcardDeckController {
         }
     }
 
+    public void refreshButton(MouseEvent event){
+    if (event.getButton() == MouseButton.PRIMARY || event.getButton() == MouseButton.SECONDARY){
+            reviewedFlashcardQueue.getFlashcards().addAll(selectedFlashcardQueue.getFlashcards());
+            selectedFlashcardQueue.getFlashcards().clear();
+            selectedFlashcardQueue.getFlashcards().addAll(reviewedFlashcardQueue.getFlashcards());
+            reviewedFlashcardQueue.getFlashcards().clear();
+
+            if (flashcardDifficultyComboBox.isVisible()){
+                flashcardDifficultyComboBox.setVisible(false);
+                flashcardAnswerLabel.setVisible(false);
+                showAnswerButton.setVisible(true);
+            }
+
+            Flashcard nextFlashcard;
+            try{
+                errorLabelHandling.hideErrorMessages();
+                optionsButton.setVisible(true);
+                nextButton.setVisible(true);
+                showAnswerButton.setVisible(true);
+                nextFlashcard = selectedFlashcardQueue.peek();
+                flashcardQuestionLabel.setText(nextFlashcard.getQuestion());
+                flashcardAnswerLabel.setText(nextFlashcard.getAnswer());
+                flashcardLabelHandling.showLabel(flashcardQuestionLabel);
+            }catch(IllegalStateException e){
+                errorLabelHandling.showLabel(deckIsFinishedLabel);
+                flashcardLabelHandling.hideErrorMessages();
+                flashcardDifficultyComboBox.setVisible(false);
+                showAnswerButton.setVisible(false);
+                nextButton.setVisible(false);
+                optionsButton.setVisible(false);
+            }
+        }
+    }
+
     public void loadEditQuestionScreen(){
         ScreenHandling.loadFXMLScreen("renameFlashcardQuestionScreen.fxml", "Rename Flashcard", 359, 234,false, this);
     }
@@ -163,43 +197,59 @@ public class FlashcardDeckController {
     }
 
     public void sortByDifficultyAscending(){
-        if (!noFlashcardsLabel.isVisible()){
+        if (!selectedFlashcardQueue.isEmpty()) {
             selectedFlashcardQueue.getFlashcards().addAll(reviewedFlashcardQueue.getFlashcards());
+            reviewedFlashcardQueue.getFlashcards().clear();
             selectedFlashcardQueue.ascendingHeapSort();
 
             if (flashcardDifficultyComboBox.isVisible()){
                 flashcardDifficultyComboBox.setVisible(false);
+                flashcardAnswerLabel.setVisible(false);
                 showAnswerButton.setVisible(true);
-                flashcardAnswerLabel.setVisible(true);
             }
-            if (!selectedFlashcardQueue.isEmpty()){
-                flashcardQuestionLabel.setVisible(false);
-                Flashcard selectedFlashcard = selectedFlashcardQueue.peek();
-                flashcardQuestionLabel.setText(selectedFlashcard.getQuestion());
+
+            Flashcard nextFlashcard;
+            try{
+                nextFlashcard = selectedFlashcardQueue.peek();
+                flashcardQuestionLabel.setText(nextFlashcard.getQuestion());
+                flashcardAnswerLabel.setText(nextFlashcard.getAnswer());
                 flashcardLabelHandling.showLabel(flashcardQuestionLabel);
-            }else{
-                errorLabelHandling.showLabel(noFlashcardsLabel);
+            }catch(IllegalStateException e){
+                errorLabelHandling.showLabel(deckIsFinishedLabel);
+                flashcardLabelHandling.hideErrorMessages();
+                flashcardDifficultyComboBox.setVisible(false);
+                showAnswerButton.setVisible(false);
+                nextButton.setVisible(false);
+                optionsButton.setVisible(false);
             }
         }
     }
 
-    public void sortByDifficultyDescending() {
-        if (!noFlashcardsLabel.isVisible()){
+    public void sortByDifficultyDescending(){
+        if (!selectedFlashcardQueue.isEmpty()) {
             selectedFlashcardQueue.getFlashcards().addAll(reviewedFlashcardQueue.getFlashcards());
+            reviewedFlashcardQueue.getFlashcards().clear();
             selectedFlashcardQueue.descendingHeapSort();
 
             if (flashcardDifficultyComboBox.isVisible()){
                 flashcardDifficultyComboBox.setVisible(false);
+                flashcardAnswerLabel.setVisible(false);
                 showAnswerButton.setVisible(true);
-                flashcardAnswerLabel.setVisible(true);
             }
-            if (!selectedFlashcardQueue.isEmpty()){
-                flashcardQuestionLabel.setVisible(false);
-                Flashcard selectedFlashcard = selectedFlashcardQueue.peek();
-                flashcardQuestionLabel.setText(selectedFlashcard.getQuestion());
+
+            Flashcard nextFlashcard;
+            try{
+                nextFlashcard = selectedFlashcardQueue.peek();
+                flashcardQuestionLabel.setText(nextFlashcard.getQuestion());
+                flashcardAnswerLabel.setText(nextFlashcard.getAnswer());
                 flashcardLabelHandling.showLabel(flashcardQuestionLabel);
-            }else{
-                errorLabelHandling.showLabel(noFlashcardsLabel);
+            }catch(IllegalStateException e){
+                errorLabelHandling.showLabel(deckIsFinishedLabel);
+                flashcardLabelHandling.hideErrorMessages();
+                flashcardDifficultyComboBox.setVisible(false);
+                showAnswerButton.setVisible(false);
+                nextButton.setVisible(false);
+                optionsButton.setVisible(false);
             }
         }
     }
@@ -226,8 +276,8 @@ public class FlashcardDeckController {
             if (flashcardDifficultyComboBox.isVisible()) {
                 FlashcardDifficulty difficulty = flashcardDifficultyComboBox.getValue();
                 reviewedFlashcard.setDifficulty(difficulty);
-                reviewedFlashcardQueue.enqueue(reviewedFlashcard);
             }
+            reviewedFlashcardQueue.enqueue(reviewedFlashcard);
         }
         controller.updateDeckList(reviewedFlashcardQueue);
         controller.saveFlashcards();

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="234.0" prefWidth="359.0" style="-fx-background-color: e5f3fd;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.computer_science_ia.Controllers.EditNoteTitleController">
+   <AnchorPane prefHeight="243.0" prefWidth="365.0">
+      <Button fx:id="confirmButton" layoutX="150.0" layoutY="176.0" mnemonicParsing="false" onAction="#editNote" onKeyPressed="#handleEnterKey" prefWidth="59.0" text="Confirm">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Text layoutX="147.0" layoutY="92.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Update title:" />
+      <TextField fx:id="titleField" layoutX="74.0" layoutY="104.0" prefHeight="26.0" prefWidth="206.0" />
+      <Label fx:id="blankTitleField" layoutX="116.0" layoutY="202.0" text="Please input a new title" textFill="RED" visible="false" />
+      <Label fx:id="noteExists" layoutX="129.0" layoutY="202.0" text="Note already exists" textFill="RED" visible="false" />
+   </AnchorPane>
+</VBox>
