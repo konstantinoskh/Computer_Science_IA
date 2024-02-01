@@ -19,12 +19,15 @@ public class AddFolderController {
         Platform.runLater(() -> {
             MainMenuController controller = ((MainMenuController) folderNameField.getScene().getWindow().getUserData());
             String folderName = folderNameField.getText();
-            controller.addFile(folderName);
 
-            File newFolder = FileHandling.createFile(folderName, MainMenuController.currentFilePath);
-            newFolder.mkdir();
+            if (!folderName.isEmpty()) {
+                controller.addFile(folderName);
+
+                File newFolder = FileHandling.createFile(folderName, MainMenuController.currentFilePath);
+                newFolder.mkdir();
+                Stage stage = (Stage) confirmButton.getScene().getWindow();
+                stage.close();
+            }
         });
-        Stage stage = (Stage) confirmButton.getScene().getWindow();
-        stage.close();
     }
 }

@@ -26,6 +26,8 @@ public class RenameTaskController {
         String newTaskName = newTaskNameField.getText();
         if(newTaskName.isEmpty()){
             missingTaskNameLabel.setVisible(true);
+        }else if (newTaskName.equals(taskTitle)){
+
         }else{
             controller.setTaskTitle(taskTitle, newTaskName);
             stage.close();

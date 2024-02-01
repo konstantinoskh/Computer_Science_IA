@@ -10,18 +10,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="421fb70f-6cfd-4f4f-a395-b0fff41e15c0" name="Changes" comment="Yes">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/computer_science_ia/Controllers/EditNoteContentController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/computer_science_ia/Controllers/EditNoteTitleController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/computer_science_ia/editNoteContentScreen.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/computer_science_ia/editNoteTitleScreen.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/Computer_Science_IA_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/Computer_Science_IA_jar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/computer_science_ia/Controllers/EditNoteController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/computer_science_ia/Controllers/EditNoteSubjectController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/computer_science_ia/Controllers/FlashcardDeckController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/computer_science_ia/Controllers/FlashcardDeckController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/computer_science_ia/Controllers/AddFolderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/computer_science_ia/Controllers/AddFolderController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/computer_science_ia/Controllers/MainMenuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/computer_science_ia/Controllers/MainMenuController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/computer_science_ia/FlashcardDeckList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/computer_science_ia/FlashcardDeckList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/computer_science_ia/editNoteScreen.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/computer_science_ia/editNoteSubjectScreen.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/computer_science_ia/flashcardDeckScreen.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/computer_science_ia/flashcardDeckScreen.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/computer_science_ia/mainMenu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/computer_science_ia/mainMenu.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/computer_science_ia/Controllers/RenameTaskController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/computer_science_ia/Controllers/RenameTaskController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,23 +44,23 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Downloaded.Files.Path.Enabled": "true",
-    "Repository.Attach.Annotations": "true",
-    "Repository.Attach.JavaDocs": "true",
-    "Repository.Attach.Sources": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "master",
-    "last_opened_file_path": "C:/Program Files (x86)/Java/jre-1.8/bin/zip.dll",
-    "project.structure.last.edited": "Facets",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.49310344",
-    "settings.editor.selected.configurable": "reference.settings.project.maven.archetype.catalogs"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;true&quot;,
+    &quot;Repository.Attach.Annotations&quot;: &quot;true&quot;,
+    &quot;Repository.Attach.JavaDocs&quot;: &quot;true&quot;,
+    &quot;Repository.Attach.Sources&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/khkon/IdeaProjects/HomeworkWizz_ME/src/main/resources&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Artifacts&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.49310344&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.archetype.catalogs&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\khkon\IdeaProjects\Computer_Science_IA\src\main\resources\com\example\computer_science_ia" />

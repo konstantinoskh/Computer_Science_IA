@@ -293,14 +293,10 @@ public class MainMenuController {
 
 
     private void updateTaskListView(String taskTitle, String newTitle){
-        ArrayList<String> tasks = (ArrayList<String>) taskListView.getItems();
-
-        for (String task : tasks){
-            if (task.equals(taskTitle)){
-                notesListView.getItems().remove(task);
-                notesListView.getItems().add(newTitle);
-            }
-        }
+       taskListView.getItems().removeIf(x -> x.equals(taskTitle));
+       taskListView.getItems().add(newTitle);
+       taskListView.setVisible(false);
+       taskListView.setVisible(true);
     }
 
     public void clearTasks(){
@@ -573,16 +569,6 @@ public class MainMenuController {
     public void addNote(String subject, String title, String content) {
         currentNotesList.addNote(subject, title, content);
         notesListView.getItems().add(title);
-    }
-
-    public void setNoteDetails(String selectedNoteTitle, String newSubject, String newTitle, String newContent) {
-        Note selectedNote = currentNotesList.getNoteByTitle(selectedNoteTitle);
-        if (selectedNote!= null) {
-            selectedNote.setSubject(newSubject);
-            selectedNote.setTitle(newTitle);
-            selectedNote.setContent(newContent);
-            updateNoteListView(selectedNoteTitle, newTitle);
-        }
     }
 
     public void setNoteSubject(String noteTitle, String subject) {
